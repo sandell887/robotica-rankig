@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-UA-Compatible" content="ie=edge">
+    <title>Ranking Robotica</title>
+    <script type="text/javascript">
+        function Atualizar() {
+            window.location.reload();
+        }
+
+    </script>
+
+
+    <style>
+        table {
+            width: 30%;
+            margin: auto;
+        }
+
+        td,
+        th {
+            border: 2px solid #000000;
+            text-align: center;
+            background-color: rgb(189, 189, 189);
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #tbody tr:nth-child(1) td {
+            background-color: green;
+        }
+
+        #tbody tr:nth-child(2) td {
+            background-color: yellow;
+        }
+
+        #tbody tr:nth-child(3) td {
+            background-color: orange;
+        }
+    </style>
+
+</head>
+
+<body onload="setInterval('Atualizar()',5000)"  oncontextmenu="return false" ondragstart="return false"
+
+onselectstart="return false" >
+    <div>
+        <h1>Ranking</h1>
+    </div>
+
+    <table>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="firebase.js"></script>
+
+
+</body>
+
+</html>
